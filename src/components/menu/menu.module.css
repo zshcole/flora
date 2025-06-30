@@ -2,11 +2,11 @@
   position: fixed;
   top: 1rem;
   right: 1rem;
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(45, 55, 72, 0.1);
+  border: 1px solid rgba(45, 55, 72, 0.2);
   border-radius: 0.5rem;
   padding: 0.75rem;
-  color: white;
+  color: #2D3748;
   cursor: pointer;
   backdrop-filter: blur(10px);
   transition: all 0.2s ease;
@@ -14,7 +14,7 @@
 }
 
 .menuButton:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: rgba(45, 55, 72, 0.15);
   transform: scale(1.05);
 }
 
@@ -33,13 +33,13 @@
   top: 1rem;
   right: 1rem;
   width: 20rem;
-  background: linear-gradient(135deg, rgba(78, 205, 196, 0.95) 0%, rgba(68, 160, 141, 0.95) 100%);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(247, 250, 252, 0.95) 100%);
+  border: 1px solid rgba(45, 55, 72, 0.15);
   border-radius: 0.75rem;
   padding: 0;
   z-index: 1002;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
-  color: white;
+  color: #2D3748;
   overflow: hidden;
   backdrop-filter: blur(20px);
 }
@@ -62,8 +62,8 @@
 }
 
 .closeButton:hover {
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
+  color: #2D3748;
+  background: rgba(45, 55, 72, 0.1);
 }
 
 .userSection {
@@ -71,29 +71,29 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(45, 55, 72, 0.15);
 }
 
 .userIcon {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(45, 55, 72, 0.1);
   border-radius: 50%;
   padding: 0.5rem;
-  color: white;
+  color: #2D3748;
 }
 
 .userName {
   font-weight: 600;
   font-size: 1.125rem;
-  color: white;
+  color: #2D3748;
 }
 
 .userSubtext {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #718096;
 }
 
 .section {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(45, 55, 72, 0.15);
 }
 
 .menuItem {
@@ -107,16 +107,16 @@
   background: none;
   width: 100%;
   text-align: left;
-  color: white;
+  color: #2D3748;
   font-size: 0.9rem;
 }
 
 .menuItem:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(45, 55, 72, 0.05);
 }
 
 .icon {
-  color: rgba(255, 255, 255, 0.8);
+  color: #718096;
   flex-shrink: 0;
 }
 
@@ -124,7 +124,7 @@
   display: flex;
   gap: 0.25rem;
   margin-left: auto;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(45, 55, 72, 0.1);
   border-radius: 0.375rem;
   padding: 0.125rem;
 }
@@ -132,7 +132,7 @@
 .themeButton {
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: #718096;
   padding: 0.375rem;
   border-radius: 0.25rem;
   cursor: pointer;
@@ -143,12 +143,12 @@
 }
 
 .themeButton:hover {
-  color: white;
+  color: #2D3748;
 }
 
 .themeButton.active {
-  background: rgba(255, 255, 255, 0.25);
-  color: white;
+  background: rgba(45, 55, 72, 0.15);
+  color: #2D3748;
 }
 
 .signInSection {
@@ -162,14 +162,14 @@
   padding: 1rem;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  color: white;
+  color: #2D3748;
   font-size: 0.9rem;
 }
 
 .signInItem:hover {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(45, 55, 72, 0.05);
 }
 
 .signInItem .icon {
-  color: rgba(255, 255, 255, 0.8);
+  color: #718096;
 }
