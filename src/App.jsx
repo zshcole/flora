@@ -1,23 +1,36 @@
 import { useState } from 'react'
-import styles from './App.module.css'
 import { LuCat } from 'react-icons/lu'
-import Chat from './components/chat/index'
-import Controls from './components/controls/index'
-import { MESSAGES } from './constants'
+
+import Chat from './components/chat'
+import Controls from './components/controls'
+import Menu from './components/menu'
+import styles from './App.module.css'
 
 function App() {
   const [messages, setMessages] = useState([])
-  return (
 
+  function handleSendMessage(content) {
+    setMessages((prevMessages) => [...prevMessages, { role: 'user', content }])
+  }
+
+  return (
     <div className={styles.app}>
+      <Menu />
+
       <header className={styles.header}>
-      <LuCat className={styles.logo} size={40} strokeWidth={2.75} />
+        <LuCat
+          className={styles.logo}
+          size={40}
+          strokeWidth={2.75}
+        />
         <h1 className={styles.title}>flora</h1>
       </header>
-      <div className={styles.chatContainer}>
-        <Chat messages={messages}/>
-      </div>
-      <Controls />
+
+      <main className={styles.chatContainer}>
+        <Chat messages={messages} />
+      </main>
+
+      <Controls onSendMessage={handleSendMessage} />
     </div>
   )
 }
