@@ -1,10 +1,15 @@
 
 import styles from './chat.module.css'
 
+const WELCOME_MESSAGE = {
+  role: "assistant",
+  content: "Hello! How can I assist you right now?",
+};
+
 function Chat({ messages }) {
     return (
         <div className={styles.chat}>
-            {messages.map(({role, content}, index) => (
+            {[WELCOME_MESSAGE, ...messages].map(({role, content}, index) => (
                 console.log('role', content),
                 <div className={styles.message} key={index} data-role={role}>
                     <p>{content}</p>

@@ -23,6 +23,11 @@
   font-family: inherit;
   font-size: 1rem;
   line-height: 1.5;
+  color: #333;
+}
+
+.textArea::placeholder {
+  color: #888;
 }
 
 .button {

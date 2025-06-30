@@ -1,13 +1,37 @@
+import { useState } from 'react'
 import styles from './controls.module.css'
 import { Textarea, Button } from "@chakra-ui/react";
 
-export function Controls() {
+export function Controls({ onSendMessage }) {
+    const [content, setContent] = useState('')
+    function handleContentChange(e) {
+        setContent(e.target.value)
+    }
+    function handleSendMessage() {
+        if (content.length > 0) {
+            console.log('send message', content)
+            onSendMessage(content)
+            setContent('')
+        }
+    }
+    function handleEnterPress(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault()
+            handleSendMessage()
+        }
+    }
     return(
         <div className={styles.controls}>
             <div className={styles.textAreaContainer}>
-                <Textarea className={styles.textArea} size="md" placeholder="Ask a question..." />
+                <Textarea 
+                    className={styles.textArea} 
+                    size="md" placeholder="Ask a question..."
+                    value={content}
+                    onChange={handleContentChange}
+                    onKeyDown={handleEnterPress}
+                />
             </div>
-            <Button className={styles.button}>
+            <Button className={styles.button} onClick={handleSendMessage}>
                 <SendIcon/>
             </Button>
         </div>
