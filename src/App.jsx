@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { LuCat } from 'react-icons/lu'
+import { TbCannabis } from 'react-icons/tb'
 
 import Chat from './components/chat'
 import Controls from './components/controls'
@@ -18,12 +18,17 @@ function App() {
       <Menu />
 
       <header className={styles.header}>
-        <LuCat
+        <TbCannabis
           className={styles.logo}
           size={40}
-          strokeWidth={2.75}
+          strokeWidth={1}
         />
         <h1 className={styles.title}>flora</h1>
+                <TbCannabis
+          className={styles.logo}
+          size={40}
+          strokeWidth={1}
+        />
       </header>
 
       <main className={styles.chatContainer}>
