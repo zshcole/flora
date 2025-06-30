@@ -2,10 +2,11 @@ import { useState } from 'react'
 import styles from './App.module.css'
 import { LuCat } from 'react-icons/lu'
 import Chat from './components/chat/index'
+import Controls from './components/controls/index'
 import { MESSAGES } from './constants'
 
 function App() {
-  const [messages, setMessages] = useState(MESSAGES)
+  const [messages, setMessages] = useState([])
   return (
 
     <div className={styles.app}>
@@ -16,6 +17,7 @@ function App() {
       <div className={styles.chatContainer}>
         <Chat messages={messages}/>
       </div>
+      <Controls />
     </div>
   )
 }
