@@ -20,7 +20,8 @@
     box-sizing: border-box;
     &[data-role="user"] {
         align-self: flex-end;
-        background: #f3f3f3;
+        background: #4ECDC4;
+        color: #ffffff
     }
     &[data-role="assistant"] {
         align-self: flex-start;
