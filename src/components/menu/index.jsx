@@ -1,13 +1,14 @@
 import { useState } from 'react'
-import { 
-  LuUser, 
-  LuSun, 
-  LuMoon, 
+import { useNavigate } from 'react-router-dom'
+import {
+  LuUser,
+  LuSun,
+  LuMoon,
   LuMonitor,
-  LuInfo, 
-  LuFileText, 
-  LuShield, 
-  LuGithub, 
+  LuInfo,
+  LuFileText,
+  LuShield,
+  LuGithub,
   LuInstagram,
   LuTriangle,
   LuBug,
@@ -21,12 +22,18 @@ import styles from './menu.module.css'
 function Menu() {
   const [isOpen, setIsOpen] = useState(false)
   const [theme, setTheme] = useState('system')
+  const navigate = useNavigate()
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
   const handleThemeChange = (newTheme) => {
     setTheme(newTheme)
     // Add theme logic here
+  }
+
+  const handleNavigation = (path) => {
+    navigate(path)
+    setIsOpen(false) // Close menu after navigation
   }
 
   return (
@@ -79,7 +86,7 @@ function Menu() {
                 </div>
               </div>
 
-              <div className={styles.menuItem}>
+              <div className={styles.menuItem} onClick={() => handleNavigation('/about')}>
                 <LuInfo className={styles.icon} size={20} />
                 <span>About</span>
               </div>
