@@ -9,15 +9,22 @@
 
 .message {
     color: black;
-    max-width: 70%;
+    min-width: 15%;
+    max-width: 85%;
+    width: fit-content;
     padding: 12px 16px;
     border-radius: 16px;
-    min-height: 2.5em;
+    /* Remove fixed min-height or make it smaller */
+    min-height: auto; /* or min-height: 1.4em; for at least one line */
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Good for multi-line alignment */
+    
+    /* Simplified word-breaking (remove duplicates) */
     word-wrap: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    
     box-sizing: border-box;
+    
     &[data-role="user"] {
         align-self: flex-end;
         background: #f3f3f3;
@@ -31,8 +38,10 @@
 .message p {
     margin: 0;
     line-height: 1.4;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
+    word-break: break-word;
     hyphens: auto;
     width: 100%;
+    white-space: pre-wrap;
+    flex: 1;
 }

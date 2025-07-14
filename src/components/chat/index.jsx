@@ -6,7 +6,7 @@ const WELCOME_MESSAGE = {
   content: "Hello! How can I assist you right now?",
 };
 
-function Chat({ messages }) {
+function ChatComponent({ messages }) {
     return (
         <div className={styles.chat}>
             {[WELCOME_MESSAGE, ...messages].map(({role, content}, index) => (
@@ -18,4 +18,4 @@ function Chat({ messages }) {
     )
 }
 
-export default Chat;
+export default ChatComponent;

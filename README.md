@@ -1,12 +1,76 @@
-# React + Vite
+# Flora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Flora is a React-based web application built with Vite, featuring a modular UI component structure. The project appears to focus on a chat interface with additional UI elements, as indicated by the component organization.
 
-Currently, two official plugins are available:
+## Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: React
+- **Build Tool**: Vite
+- **Purpose**: A chat-centric application with customizable UI components (details to be expanded as the project evolves).
+- **Last Updated**: July 10, 2025
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zshcole/flora.git
+   cd flora
+
+   # Flora
+
+Flora is a React-based web application built with Vite, featuring a modular UI component structure. The project appears to focus on a chat interface with additional UI elements, as indicated by the component organization.
+
+## Project Overview
+
+- **Framework**: React
+- **Build Tool**: Vite
+- **Purpose**: A chat-centric application with customizable UI components (details to be expanded as the project evolves).
+- **Last Updated**: July 10, 2025
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v14.x or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/zshcole/flora.git
+   cd flora
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## Project Structure
+
+```
+public/           # Static assets (e.g., index.html)
+src/              # Source code directory
+    components/     # Reusable UI components organized by category
+        chat/         # Chat-related components (e.g., messages, input)
+        controls/     # UI control elements (e.g., buttons, sliders)
+        menu/         # Menu and navigation components
+        ui/           # General UI building blocks (e.g., cards, buttons)
+    App.jsx         # Main application component
+    main.jsx        # React entry point
+
+vite.config.js    # Vite configuration file
+package.json      # Project dependencies and scripts
+```
+
