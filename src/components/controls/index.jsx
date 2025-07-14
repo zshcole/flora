@@ -9,7 +9,6 @@ export function Controls({ onSendMessage }) {
     }
     function handleSendMessage() {
         if (content.length > 0) {
-            console.log('send message', content)
             onSendMessage(content)
             setContent('')
         }
