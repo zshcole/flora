@@ -96,7 +96,7 @@ function Menu() {
                 <span>Terms</span>
               </div>
 
-              <div className={styles.menuItem}>
+              <div className={styles.menuItem} onClick={() => handleNavigation('/privacy')}>
                 <LuShield className={styles.icon} size={20} />
                 <span>Privacy</span>
               </div>
